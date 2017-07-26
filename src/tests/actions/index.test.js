@@ -80,3 +80,27 @@ describe('async fetch30 action', () => {
     });
   });
 });
+
+describe('async fetchAll action', () => {
+  afterEach(() => {
+    nock.cleanAll();
+  });
+
+  it('creates FETCH_ALL_SUCCESS when fetching has been done', () => {
+    nock('https://fcctop100.herokuapp.com/api/fccusers/top/')
+      .get('/alltime')
+      .reply(200, { body: [{username: 'sjames1958gm'}, {username: 'Manish-Giri'}] });
+
+    const expectedActions = [
+      { type: types.FETCH_ALL_REQUEST },
+      { type: types.FETCH_ALL_SUCCESS, body: [{username: 'sjames1958gm'}, {username: 'Manish-Giri'}] },
+    ];
+
+    const store = mockStore({ scoreAlldays: [] });
+
+    return store.dispatch(actions.fetchAll()).then(() => {
+      // return of async actions
+      expect(store.getActions()).toEqual(expectedActions);
+    });
+  });
+});

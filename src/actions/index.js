@@ -36,3 +36,11 @@ export const fetch30 = () => (dispatch) => {
     .then(json => dispatch(fetch30Success(json.body)))
     .catch(ex => dispatch(fetch30Failure(ex)));
 };
+
+export const fetchAll = () => (dispatch) => {
+  dispatch(fetchAllRequest());
+  return fetch('https://fcctop100.herokuapp.com/api/fccusers/top/alltime')
+    .then(response => response.json())
+    .then(json => dispatch(fetchAllSuccess(json.body)))
+    .catch(ex => dispatch(fetchAllFailure(ex)));
+};
