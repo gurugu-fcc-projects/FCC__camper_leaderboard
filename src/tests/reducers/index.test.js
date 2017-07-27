@@ -29,7 +29,7 @@ describe('reducer', () => {
     expect(
       reducer({}, {
         type: types.FETCH_30_SUCCESS,
-        body: [{name: 'Bobby', score: 300}],
+        data: [{name: 'Bobby', score: 300}],
       })
     ).toEqual({
       score30days: [{name: 'Bobby', score: 300}],
@@ -61,7 +61,7 @@ describe('reducer', () => {
     expect(
       reducer({}, {
         type: types.FETCH_ALL_SUCCESS,
-        body: [{name: 'Bobby', score: 300}],
+        data: [{name: 'Bobby', score: 300}],
       })
     ).toEqual({
       scoreAlldays: [{name: 'Bobby', score: 300}],

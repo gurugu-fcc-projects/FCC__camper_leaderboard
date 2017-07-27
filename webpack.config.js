@@ -17,6 +17,20 @@ module.exports = {
             presets: ['env', 'react']
           }
         }
+      },
+      {
+        test: /\.scss$/,
+        exclude: /(node_modules)/,
+        use: [{
+          loader: 'style-loader'
+        }, {
+          loader: 'css-loader'
+        }, {
+          loader: 'sass-loader',
+          options: {
+            includePaths: ["absolute/path/a", "absolute/path/b"]
+          }
+        }]
       }
     ]
   }
