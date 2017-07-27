@@ -1,7 +1,6 @@
 import * as types from '../constants/ActionTypes';
 
 const initial_state = {
-  testVariable: 'testing...',
   isRequesting: false,
   score30days: [],
   scoreAlldays: [],
@@ -21,7 +20,7 @@ const leaderboardApp = (
     case types.FETCH_30_SUCCESS:
       return {
         ...state,
-        score30days: action.body,
+        score30days: action.data,
       };
     case types.FETCH_30_FAILURE:
       return {
@@ -36,7 +35,7 @@ const leaderboardApp = (
     case types.FETCH_ALL_SUCCESS:
       return {
         ...state,
-        scoreAlldays: action.body,
+        scoreAlldays: action.data,
       };
     case types.FETCH_ALL_FAILURE:
       return {

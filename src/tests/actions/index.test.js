@@ -16,11 +16,11 @@ describe('fetch30 actions', () => {
     });
   });
   it('fetch30Success creates FETCH_30_SUCCESS action', () => {
-    const body = {name: 'Bobby', score: 300};
+    const data = {name: 'Bobby', score: 300};
 
-    expect(actions.fetch30Success(body)).toEqual({
+    expect(actions.fetch30Success(data)).toEqual({
       type: types.FETCH_30_SUCCESS,
-      body
+      data
     });
   });
   it('fetch30Failure creates FETCH_30_FAILURE action', () => {
@@ -40,11 +40,11 @@ describe('fetchAll actions', () => {
     });
   });
   it('fetchAllSuccess creates FETCH_ALL_SUCCESS action', () => {
-    const body = {name: 'Bobby', score: 300};
+    const data = {name: 'Bobby', score: 300};
 
-    expect(actions.fetchAllSuccess(body)).toEqual({
+    expect(actions.fetchAllSuccess(data)).toEqual({
       type: types.FETCH_ALL_SUCCESS,
-      body
+      data
     });
   });
   it('fetchAllFailure creates FETCH_ALL_FAILURE action', () => {
@@ -57,19 +57,19 @@ describe('fetchAll actions', () => {
   });
 });
 
-describe('async fetch30 action', () => {
+describe('async actions', () => {
   afterEach(() => {
     nock.cleanAll();
   });
 
-  it('creates FETCH_30_SUCCESS when fetching has been done', () => {
+  it('fetch30 creates FETCH_30_SUCCESS when fetching has been done', () => {
     nock('https://fcctop100.herokuapp.com/api/fccusers/top/')
       .get('/recent')
-      .reply(200, { body: [{username: 'SkyC0der'}, {username: 'sjames1958gm'}] });
+      .reply(200, [{username: 'SkyC0der'}, {username: 'sjames1958gm'}]);
 
     const expectedActions = [
       { type: types.FETCH_30_REQUEST },
-      { type: types.FETCH_30_SUCCESS, body: [{username: 'SkyC0der'}, {username: 'sjames1958gm'}] },
+      { type: types.FETCH_30_SUCCESS, data: [{username: 'SkyC0der'}, {username: 'sjames1958gm'}] },
     ];
 
     const store = mockStore({ score30days: [] });
@@ -79,21 +79,15 @@ describe('async fetch30 action', () => {
       expect(store.getActions()).toEqual(expectedActions);
     });
   });
-});
 
-describe('async fetchAll action', () => {
-  afterEach(() => {
-    nock.cleanAll();
-  });
-
-  it('creates FETCH_ALL_SUCCESS when fetching has been done', () => {
+  it('fetchAll creates FETCH_ALL_SUCCESS when fetching has been done', () => {
     nock('https://fcctop100.herokuapp.com/api/fccusers/top/')
       .get('/alltime')
-      .reply(200, { body: [{username: 'sjames1958gm'}, {username: 'Manish-Giri'}] });
+      .reply(200, [{username: 'sjames1958gm'}, {username: 'Manish-Giri'}]);
 
     const expectedActions = [
       { type: types.FETCH_ALL_REQUEST },
-      { type: types.FETCH_ALL_SUCCESS, body: [{username: 'sjames1958gm'}, {username: 'Manish-Giri'}] },
+      { type: types.FETCH_ALL_SUCCESS, data: [{username: 'sjames1958gm'}, {username: 'Manish-Giri'}] },
     ];
 
     const store = mockStore({ scoreAlldays: [] });

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "jest",
-    "test_watch": "npm test -- --watch"
+    "test-watch": "npm test -- --watch"
   },
   "keywords": [],
   "author": "",

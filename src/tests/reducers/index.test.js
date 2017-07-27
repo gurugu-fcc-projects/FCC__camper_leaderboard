@@ -3,7 +3,6 @@ import * as types from '../../constants/ActionTypes';
 
 describe('reducer', () => {
   const initial_state = {
-    testVariable: 'testing...',
     isRequesting: false,
     score30days: [],
     scoreAlldays: [],
