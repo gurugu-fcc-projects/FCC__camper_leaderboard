@@ -14,9 +14,10 @@ export class App extends Component {
   render() {
     const { score30days } = this.props;
 
-    const scoreComponent = score30days.map(user => {
+    const scoreComponent = score30days.map((user, index) => {
       return (
         <tr key={user.username}>
+          <td>{index + 1}</td>
           <td>{user.username}</td>
           <td>{user.recent}</td>
           <td>{user.alltime}</td>
@@ -29,6 +30,7 @@ export class App extends Component {
         <table>
           <thead>
             <tr>
+              <th>#</th>
               <th>Camper</th>
               <th>Top 30 Days</th>
               <th>Top All Time</th>
