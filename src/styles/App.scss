@@ -1,3 +1,40 @@
+
+/*------------------------------------------------------------------
+
+    [Table of contents]
+
+	1. VARIABLES
+	2. GLOBAL STYLES
+  3. TABLE STYLES
+
+-------------------------------------------------------------------*/
+
+/* -------------------------
+        1. VARIABLES
+------------------------- */
+
+/* 1.1 Color variables */
+$bg-color:    #006400;
+
+/* 1.2 Font variables */
+$main-font: 'Space Mono', monospace;
+
+/* 1.4 Responsive variables */
+$breakpoint-mobile: 768px;
+$breakpoint-middle: 1024px;
+
+/* -------------------------
+        2. GLOBAL STYLES
+------------------------- */
+
+body {
+  background-color: $bg-color;
+}
+
+/* -------------------------
+        2. TABLE STYLES
+------------------------- */
+
 table {
   border-collapse: collapse;
   border-spacing: 0px;
