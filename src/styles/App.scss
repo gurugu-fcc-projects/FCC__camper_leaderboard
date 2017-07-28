@@ -5,8 +5,9 @@
 
 	1. VARIABLES
 	2. GLOBAL
-  3. TABLE
-  4. FOOTER
+  3. HEADER
+  4. TABLE
+  5. FOOTER
 
 -------------------------------------------------------------------*/
 
@@ -33,12 +34,19 @@ body {
   background-color: $color-fcc;
 }
 
-h1 {
-  color: $color-white;
+/* -------------------------
+        3. HEADER
+------------------------- */
+
+header {
+  text-align: center;
+  h1 {
+    color: $color-white;
+  }
 }
 
 /* -------------------------
-        2. TABLE
+        4. TABLE
 ------------------------- */
 
 .table {
@@ -64,7 +72,7 @@ table, th, td {
 }
 
 /* -------------------------
-        2. FOOTER
+        5. FOOTER
 ------------------------- */
 
 footer {
