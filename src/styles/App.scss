@@ -86,7 +86,7 @@ only screen and (max-width: 760px),
 table, th, td {
   padding: 0;
   // border: 1px solid #ccc;
-  border: 1px solid #000;
+  // border: 1px solid #000;
 }
 
 table {
@@ -103,6 +103,9 @@ table {
     // background-color: #333;
     background-color: darken($color-fcc, 7%);
   }
+  td:not(.username-column) {
+    text-align: center;
+  }
   td a {
     display: flex;
     align-items: center;
@@ -110,9 +113,6 @@ table {
   img {
     height: 30px;
     padding: 5px 10px 5px 5px;
-  }
-  .column-number {
-    text-align: center;
   }
 }
 

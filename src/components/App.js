@@ -17,8 +17,8 @@ export class App extends Component {
     const scoreComponent = score30days.map((user, index) => {
       return (
         <tr key={user.username}>
-          <td className="column-number">{index + 1}</td>
-          <td>
+          <td>{index + 1}</td>
+          <td className="username-column">
             <a
               target="blank"
               href={`https://www.freecodecamp.com/${user.username}`}>
