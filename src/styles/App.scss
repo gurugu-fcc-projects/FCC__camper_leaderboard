@@ -85,7 +85,8 @@ only screen and (max-width: 760px),
 
 table, th, td {
   padding: 0;
-  border: 1px solid #ccc;
+  // border: 1px solid #ccc;
+  border: 1px solid #000;
 }
 
 table {
@@ -96,9 +97,11 @@ table {
     background-color: #eee;
   }
   th {
-    background-color: #333;
+    padding: 5px;
     color: $color-white;
     font-weight: bold;
+    // background-color: #333;
+    background-color: darken($color-fcc, 7%);
   }
   td a {
     display: flex;
@@ -108,6 +111,25 @@ table {
     height: 30px;
     padding: 5px 10px 5px 5px;
   }
+  .column-number {
+    text-align: center;
+  }
+}
+
+// fancy scrollbar
+
+.table::-webkit-scrollbar {
+  width: 10px;
+}
+
+.table::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.table::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
 /* -------------------------
