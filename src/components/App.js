@@ -29,7 +29,7 @@ export class App extends Component {
       <div>
 
         <header>
-          <h1>FCC Camper Leaderboard</h1>
+          <h1>freeCodeCamp Leaderboard</h1>
         </header>
 
         <section className="table">
