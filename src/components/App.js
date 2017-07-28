@@ -12,7 +12,7 @@ export class App extends Component {
   }
 
   render() {
-    const { score30days } = this.props;
+    const { score30days, scoreAlldays } = this.props;
 
     const scoreComponent = score30days.map((user, index) => {
       return (
@@ -27,19 +27,31 @@ export class App extends Component {
 
     return (
       <div>
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Camper</th>
-              <th>Top 30 Days</th>
-              <th>Top All Time</th>
-            </tr>
-          </thead>
-          <tbody>
-            {scoreComponent}
-          </tbody>
-        </table>
+
+        <header>
+          <h1>FCC Camper Leaderboard</h1>
+        </header>
+
+        <section className="table">
+          <table>
+            <thead>
+              <tr>
+                <th className="header-position">#</th>
+                <th className="header-camper">Camper</th>
+                <th className="header-30">Top 30 Days</th>
+                <th className="header-all">Top All Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {scoreComponent}
+            </tbody>
+          </table>
+        </section>
+
+        <footer>
+
+        </footer>
+
       </div>
     );
   }

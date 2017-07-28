@@ -14,7 +14,8 @@
 ------------------------- */
 
 /* 1.1 Color variables */
-$bg-color:    #006400;
+$color-fcc:   #006400;
+$color-white: #fff;
 
 /* 1.2 Font variables */
 $main-font: 'Space Mono', monospace;
@@ -28,16 +29,39 @@ $breakpoint-middle: 1024px;
 ------------------------- */
 
 body {
-  background-color: $bg-color;
+  background-color: $color-fcc;
+}
+
+h1 {
+  color: $color-white;
 }
 
 /* -------------------------
         2. TABLE STYLES
 ------------------------- */
 
+.table {
+  width: 800px;
+  height: 600px;
+  overflow: auto;
+  margin: 80px auto 0;
+  background-color: $color-white;
+}
+
+.header-position {
+  width: 5%;
+}
+
+.header-camper,
+.header-30,
+.header-all {
+  width: 35%;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0px;
+  margin: 10px;
 }
 
 table, th, td {
