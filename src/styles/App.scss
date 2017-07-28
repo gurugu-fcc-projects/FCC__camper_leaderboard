@@ -4,8 +4,9 @@
     [Table of contents]
 
 	1. VARIABLES
-	2. GLOBAL STYLES
-  3. TABLE STYLES
+	2. GLOBAL
+  3. TABLE
+  4. FOOTER
 
 -------------------------------------------------------------------*/
 
@@ -25,7 +26,7 @@ $breakpoint-mobile: 768px;
 $breakpoint-middle: 1024px;
 
 /* -------------------------
-        2. GLOBAL STYLES
+        2. GLOBAL
 ------------------------- */
 
 body {
@@ -37,7 +38,7 @@ h1 {
 }
 
 /* -------------------------
-        2. TABLE STYLES
+        2. TABLE
 ------------------------- */
 
 .table {
@@ -46,16 +47,9 @@ h1 {
   overflow: auto;
   margin: 80px auto 0;
   background-color: $color-white;
-}
-
-.header-position {
-  width: 5%;
-}
-
-.header-camper,
-.header-30,
-.header-all {
-  width: 35%;
+  .header-position {
+    width: 5%;
+  }
 }
 
 table {
@@ -67,4 +61,17 @@ table {
 table, th, td {
   padding: 5px;
   border: 1px solid black;
+}
+
+/* -------------------------
+        2. FOOTER
+------------------------- */
+
+footer {
+  text-align: center;
+  color: $color-white;
+  a {
+    text-decoration: none;
+    color: $color-white;
+  }
 }

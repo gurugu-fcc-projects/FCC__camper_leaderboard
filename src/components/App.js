@@ -49,7 +49,7 @@ export class App extends Component {
         </section>
 
         <footer>
-
+          <p>2017, created by <a target="blank" href="https://github.com/GuRuGuMaWaRu">Peter Krevenets</a></p>
         </footer>
 
       </div>
