@@ -26,7 +26,7 @@ export class App extends Component {
     });
 
     return (
-      <div>
+      <div className="app">
 
         <header>
           <h1>freeCodeCamp Leaderboard</h1>
