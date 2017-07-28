@@ -31,6 +31,8 @@ $breakpoint-middle: 1024px;
 ------------------------- */
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: $color-fcc;
 }
 
@@ -47,7 +49,7 @@ body {
 ------------------------- */
 
 header {
-  // text-align: center;
+  text-align: center;
   h1 {
     font-family: $font-header;
     color: $color-white;
@@ -59,27 +61,43 @@ header {
 ------------------------- */
 
 .table {
-  width: 800px;
+  width: 80%;
   height: 600px;
   overflow: auto;
-  // margin: 80px auto 0;
   background-color: $color-white;
   .header-position {
     width: 5%;
   }
 }
 
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+  .table {
+    width: 100%;
+  }
+}
+
 table {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0px;
-  // margin: 10px;
 }
 
 table, th, td {
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
 }
 
+tr:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+th {
+  background-color: #333;
+  color: $color-white;
+  font-weight: bold;
+}
 /* -------------------------
         5. FOOTER
 ------------------------- */
