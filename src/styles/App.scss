@@ -33,6 +33,7 @@ $breakpoint-middle: 1024px;
 body {
   margin: 0;
   padding: 0;
+  font-family: $font-header;
   background-color: $color-fcc;
 }
 
@@ -56,7 +57,6 @@ a {
 header {
   text-align: center;
   h1 {
-    font-family: $font-header;
     color: $color-white;
   }
 }
@@ -70,6 +70,7 @@ header {
   height: 600px;
   overflow: auto;
   background-color: $color-white;
+  box-shadow: 10px 10px darken($color-fcc, 12%);
   .header-position {
     width: 5%;
   }
@@ -80,6 +81,7 @@ only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {
   .table {
     width: 100%;
+    box-shadow: none;
   }
 }
 
