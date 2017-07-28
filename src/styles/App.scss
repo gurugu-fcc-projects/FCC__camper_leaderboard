@@ -44,6 +44,11 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* -------------------------
         3. HEADER
 ------------------------- */
@@ -78,35 +83,37 @@ only screen and (max-width: 760px),
   }
 }
 
+table, th, td {
+  padding: 0;
+  border: 1px solid #ccc;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0px;
+  tr:nth-of-type(odd) {
+    background-color: #eee;
+  }
+  th {
+    background-color: #333;
+    color: $color-white;
+    font-weight: bold;
+  }
+  td a {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    height: 30px;
+    padding: 5px 10px 5px 5px;
+  }
 }
 
-table, th, td {
-  padding: 5px;
-  border: 1px solid #ccc;
-}
-
-tr:nth-of-type(odd) {
-  background-color: #eee;
-}
-
-th {
-  background-color: #333;
-  color: $color-white;
-  font-weight: bold;
-}
 /* -------------------------
         5. FOOTER
 ------------------------- */
 
 footer {
-  // text-align: center;
   color: $color-white;
-  a {
-    text-decoration: none;
-    color: $color-white;
-  }
 }

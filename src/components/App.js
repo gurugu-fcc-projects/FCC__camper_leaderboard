@@ -18,7 +18,15 @@ export class App extends Component {
       return (
         <tr key={user.username}>
           <td>{index + 1}</td>
-          <td>{user.username}</td>
+          <td>
+            <a
+              target="blank"
+              href={`https://www.freecodecamp.com/${user.username}`}>
+              <img src={user.img} />
+              <span>{user.username}</span>
+            </a>
+            {/* {user.username} */}
+          </td>
           <td>{user.recent}</td>
           <td>{user.alltime}</td>
         </tr>
@@ -36,10 +44,10 @@ export class App extends Component {
           <table>
             <thead>
               <tr>
-                <th className="header-position">#</th>
-                <th className="header-camper">Camper</th>
-                <th className="header-30">Top 30 Days</th>
-                <th className="header-all">Top All Time</th>
+                <th>#</th>
+                <th>Camper</th>
+                <th>Top 30 Days</th>
+                <th>Top All Time</th>
               </tr>
             </thead>
             <tbody>
