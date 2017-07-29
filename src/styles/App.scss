@@ -71,11 +71,28 @@ header {
   overflow: auto;
   background-color: $color-white;
   box-shadow: 10px 10px darken($color-fcc, 12%);
-  .header-position {
-    width: 5%;
-  }
 }
 
+// .table-header {
+//   display: flex;
+//   justify-content: space-around;
+// }
+//
+// .table-row {
+//   display: flex;
+//   justify-content: space-around;
+//   .username-number {
+//     flex-basis: 5%;
+//     align-self: center;
+//   }
+//   .username-column {
+//     img {
+//       height: 30px;
+//       padding: 5px 10px 5px 5px;
+//     }
+//   }
+// }
+//
 @media
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -87,8 +104,6 @@ only screen and (max-width: 760px),
 
 table, th, td {
   padding: 0;
-  // border: 1px solid #ccc;
-  // border: 1px solid #000;
 }
 
 table {
