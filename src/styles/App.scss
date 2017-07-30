@@ -61,90 +61,95 @@ header {
   }
 }
 
+@media
+only screen and (max-width: 760px) {
+  h1 {
+    font-size: 1em;
+  }
+}
+
 /* -------------------------
         4. TABLE
 ------------------------- */
 
 .table {
-  width: 80%;
+  width: 1000px;
   height: 600px;
-  overflow: auto;
   background-color: $color-white;
   box-shadow: 10px 10px darken($color-fcc, 12%);
 }
 
-// .table-header {
-//   display: flex;
-//   justify-content: space-around;
-// }
-//
-// .table-row {
-//   display: flex;
-//   justify-content: space-around;
-//   .username-number {
-//     flex-basis: 5%;
-//     align-self: center;
-//   }
-//   .username-column {
-//     img {
-//       height: 30px;
-//       padding: 5px 10px 5px 5px;
-//     }
-//   }
-// }
-//
 @media
-only screen and (max-width: 760px),
-(min-device-width: 768px) and (max-device-width: 1024px) {
+only screen and (max-width: 760px) {
   .table {
     width: 100%;
     box-shadow: none;
   }
 }
 
-table, th, td {
-  padding: 0;
-}
-
 table {
-  width: 100%;
   border-collapse: collapse;
   border-spacing: 0px;
-  tr:nth-of-type(odd) {
-    background-color: #eee;
+
+  td:nth-child(1), th:nth-child(1) { width: 50px; }
+  td:nth-child(2), th:nth-child(2) { width: 500px; }
+  td:nth-child(3), th:nth-child(3) { width: 225px; }
+  td:nth-child(4), th:nth-child(4) { width: 225px; }
+
+  thead {
+    tr {
+      display: block;
+      position: relative;
+      th {
+        padding: 5px;
+        color: $color-white;
+        font-weight: bold;
+        background-color: darken($color-fcc, 7%);
+      }
+    }
   }
-  th {
-    padding: 5px;
-    color: $color-white;
-    font-weight: bold;
-    // background-color: #333;
-    background-color: darken($color-fcc, 7%);
+  tbody {
+    display: block;
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+    tr:nth-of-type(odd) {
+      background-color: #eee;
+    }
+    td:not(.username-column) {
+      text-align: center;
+    }
+    td a {
+      display: flex;
+      align-items: center;
+    }
+    img {
+      height: 30px;
+      padding: 5px 10px 5px 5px;
+    }
   }
-  td:not(.username-column) {
-    text-align: center;
-  }
-  td a {
-    display: flex;
-    align-items: center;
-  }
-  img {
-    height: 30px;
-    padding: 5px 10px 5px 5px;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+  th, td {
+    font-size: .8em;
   }
 }
 
 // fancy scrollbar
 
-.table::-webkit-scrollbar {
+tbody::-webkit-scrollbar {
   width: 10px;
 }
 
-.table::-webkit-scrollbar-track {
+tbody::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 10px;
 }
 
-.table::-webkit-scrollbar-thumb {
+tbody::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
@@ -155,4 +160,15 @@ table {
 
 footer {
   color: $color-white;
+  a {
+    color: lighten(yellow, 15%);
+  }
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+  footer {
+    font-size: .9em;
+  }
 }

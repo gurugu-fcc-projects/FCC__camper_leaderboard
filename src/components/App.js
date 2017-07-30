@@ -57,8 +57,8 @@ export class App extends Component {
           <h1>freeCodeCamp Leaderboard</h1>
         </header>
 
-        <section className="table">
-          <table>
+        {/* <section className="table"> */}
+          <table className="table">
             <thead>
               <tr>
                 <th>#</th>
@@ -71,19 +71,7 @@ export class App extends Component {
               {scoreComponent}
             </tbody>
           </table>
-        </section>
-
-        {/* <section className="table">
-          <div className="table-header">
-            <div>#</div>
-            <div>Camper</div>
-            <div>30 Days</div>
-            <div>All Time</div>
-          </div>
-          <div className="table-body">
-            {flexTable}
-          </div>
-        </section> */}
+        {/* </section> */}
 
         <footer>
           <p>2017, created by <a target="blank" href="https://github.com/GuRuGuMaWaRu">Peter Krevenets</a></p>
