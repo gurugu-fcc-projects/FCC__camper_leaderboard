@@ -100,6 +100,8 @@ table {
   td:nth-child(3), th:nth-child(3) { width: 225px; }
   td:nth-child(4), th:nth-child(4) { width: 225px; }
 
+  th:nth-child(3), th:nth-child(4) { cursor: pointer; }
+
   thead {
     tr {
       display: block;
@@ -151,7 +153,7 @@ only screen and (max-width: 760px),
       height: 100%;
     }
   }
-  td:nth-child(1), th:nth-child(1) { min-width: 26px; }
+  td:nth-child(1), th:nth-child(1) { min-width: 22px; }
   td:nth-child(2), th:nth-child(2) { min-width: 160px; }
   td:nth-child(3), th:nth-child(3) { min-width: 60px; }
   td:nth-child(4), th:nth-child(4) { min-width: 60px; }

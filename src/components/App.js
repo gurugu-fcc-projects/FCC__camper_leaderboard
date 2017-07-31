@@ -49,6 +49,7 @@ export class App extends Component {
 
         <Table
           tableContent={tableContent}
+          show30days={show30days}
           handle30days={fetch30}
           handleAllTime={fetchAll} />
 
@@ -63,22 +64,18 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  isRequesting: PropTypes.bool,
   show30days: PropTypes.bool,
   score30days: PropTypes.array,
   scoreAlldays: PropTypes.array,
-  error: PropTypes.string,
   fetch30: PropTypes.func,
   fetchAll: PropTypes.func,
 };
 
 
 const mapStateToProps = (state) => ({
-  isRequesting: state.isRequesting,
   show30days: state.show30days,
   score30days: state.score30days,
   scoreAlldays: state.scoreAlldays,
-  error: state.error,
 });
 
 export default connect(mapStateToProps, actions)(App);
