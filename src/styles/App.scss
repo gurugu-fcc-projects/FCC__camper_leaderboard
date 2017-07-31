@@ -146,15 +146,15 @@ only screen and (max-width: 760px),
   }
   table {
     font-size: .8em;
-    thead tr th {
-      padding: 0;
-    }
+    // thead tr th {
+    //   padding: 0;
+    // }
     tbody {
       height: 100%;
     }
   }
   td:nth-child(1), th:nth-child(1) { min-width: 22px; }
-  td:nth-child(2), th:nth-child(2) { min-width: 160px; }
+  td:nth-child(2), th:nth-child(2) { min-width: 136px; }
   td:nth-child(3), th:nth-child(3) { min-width: 60px; }
   td:nth-child(4), th:nth-child(4) { min-width: 60px; }
 }
