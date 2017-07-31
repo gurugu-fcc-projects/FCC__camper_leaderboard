@@ -50,6 +50,12 @@ a {
   color: inherit;
 }
 
+@media
+only screen and (max-width: 760px) {
+  app {
+    justify-content: flex-start;
+  }
+}
 /* -------------------------
         3. HEADER
 ------------------------- */
@@ -63,8 +69,13 @@ header {
 
 @media
 only screen and (max-width: 760px) {
-  h1 {
-    font-size: 1em;
+  header {
+    height: 5%;
+    h1 {
+      padding: 0;
+      margin: 0;
+      font-size: 1em;
+    }
   }
 }
 
@@ -77,14 +88,6 @@ only screen and (max-width: 760px) {
   height: 600px;
   background-color: $color-white;
   box-shadow: 10px 10px darken($color-fcc, 12%);
-}
-
-@media
-only screen and (max-width: 760px) {
-  .table {
-    width: 100%;
-    box-shadow: none;
-  }
 }
 
 table {
@@ -111,7 +114,7 @@ table {
   tbody {
     display: block;
     width: 100%;
-    height: 600px;
+    height: 100%;
     overflow: auto;
     tr:nth-of-type(odd) {
       background-color: #eee;
@@ -133,9 +136,26 @@ table {
 @media
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {
-  th, td {
-    font-size: .8em;
+  .table {
+    width: 100%;
+    height: 90%;
+    box-shadow: none;
   }
+  table {
+    thead tr th {
+      padding: 0;
+    }
+    tbody {
+      height: 100%;
+    }
+    th, td {
+      font-size: .8em;
+    }
+  }
+  td:nth-child(1), th:nth-child(1) { min-width: 26px; }
+  td:nth-child(2), th:nth-child(2) { min-width: 160px; }
+  td:nth-child(3), th:nth-child(3) { min-width: 60px; }
+  td:nth-child(4), th:nth-child(4) { min-width: 60px; }
 }
 
 // fancy scrollbar
@@ -169,6 +189,15 @@ footer {
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {
   footer {
+    height: 5%;
     font-size: .9em;
+  }
+}
+
+@media
+only screen and (max-width: 760px) {
+  footer p {
+    padding: 0;
+    margin: 0;
   }
 }
