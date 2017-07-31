@@ -14,13 +14,15 @@ export class App extends Component {
 
   render() {
     const {
+      show30days,
       score30days,
       scoreAlldays,
       fetch30,
       fetchAll
     } = this.props;
 
-    const tableContent = score30days.map((user, index) => {
+    const score = show30days ? score30days : scoreAlldays;
+    const tableContent = score.map((user, index) => {
       return (
         <tr key={user.username}>
           <td>{index + 1}</td>
@@ -62,6 +64,7 @@ export class App extends Component {
 
 App.propTypes = {
   isRequesting: PropTypes.bool,
+  show30days: PropTypes.bool,
   score30days: PropTypes.array,
   scoreAlldays: PropTypes.array,
   error: PropTypes.string,
@@ -71,8 +74,8 @@ App.propTypes = {
 
 
 const mapStateToProps = (state) => ({
-  testVariable: state.testVariable,
   isRequesting: state.isRequesting,
+  show30days: state.show30days,
   score30days: state.score30days,
   scoreAlldays: state.scoreAlldays,
   error: state.error,

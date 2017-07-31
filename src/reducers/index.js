@@ -2,6 +2,7 @@ import * as types from '../constants/ActionTypes';
 
 const initial_state = {
   isRequesting: false,
+  show30days: true,
   score30days: [],
   scoreAlldays: [],
   error: '',
@@ -20,6 +21,7 @@ const leaderboardApp = (
     case types.FETCH_30_SUCCESS:
       return {
         ...state,
+        show30days: true,
         score30days: action.data,
       };
     case types.FETCH_30_FAILURE:
@@ -35,6 +37,7 @@ const leaderboardApp = (
     case types.FETCH_ALL_SUCCESS:
       return {
         ...state,
+        show30days: false,
         scoreAlldays: action.data,
       };
     case types.FETCH_ALL_FAILURE:
