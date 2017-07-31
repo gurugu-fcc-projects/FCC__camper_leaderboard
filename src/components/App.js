@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import Table from './Table';
 import * as actions from '../actions';
 import '../styles/App.scss';
 
@@ -12,9 +13,14 @@ export class App extends Component {
   }
 
   render() {
-    const { score30days, scoreAlldays } = this.props;
+    const {
+      score30days,
+      scoreAlldays,
+      fetch30,
+      fetchAll
+    } = this.props;
 
-    const scoreComponent = score30days.map((user, index) => {
+    const tableContent = score30days.map((user, index) => {
       return (
         <tr key={user.username}>
           <td>{index + 1}</td>
@@ -32,24 +38,6 @@ export class App extends Component {
       );
     });
 
-    // const flexTable = score30days.map((user, index) => {
-    //   return (
-    //     <div key={user.username} className="table-row">
-    //       <div className="username-number">{index + 1}</div>
-    //       <div className="username-column">
-    //         <a
-    //           target="blank"
-    //           href={`https://www.freecodecamp.com/${user.username}`}>
-    //           <img src={user.img} />
-    //           <span>{user.username}</span>
-    //         </a>
-    //       </div>
-    //       <div>{user.recent}</div>
-    //       <div>{user.alltime}</div>
-    //     </div>
-    //   );
-    // });
-
     return (
       <div className="app">
 
@@ -57,21 +45,10 @@ export class App extends Component {
           <h1>freeCodeCamp Leaderboard</h1>
         </header>
 
-        {/* <section className="table"> */}
-          <table className="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Camper</th>
-                <th>30 Days</th>
-                <th>All Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              {scoreComponent}
-            </tbody>
-          </table>
-        {/* </section> */}
+        <Table
+          tableContent={tableContent}
+          handle30days={fetch30}
+          handleAllTime={fetchAll} />
 
         <footer>
           <p>2017, created by <a target="blank" href="https://github.com/GuRuGuMaWaRu">Peter Krevenets</a></p>
