@@ -10,7 +10,7 @@ export const configureStore = () => {
   if (process.env.MODE_ENV !== 'production') {
     middlewares.push(createLogger());
   }
-  console.log(reducer);
+
   return createStore(
     reducer,
     applyMiddleware(...middlewares)

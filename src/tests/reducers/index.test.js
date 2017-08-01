@@ -4,9 +4,9 @@ import * as types from '../../constants/ActionTypes';
 describe('reducer', () => {
   const initial_state = {
     isRequesting: false,
-    score30days: [],
-    scoreAlldays: [],
-    error: '',
+    errorMessage: '',
+    show30days: true,
+    receivedData: [],
   };
 
   it('handles initial state', () => {
@@ -32,7 +32,7 @@ describe('reducer', () => {
         data: [{name: 'Bobby', score: 300}],
       })
     ).toEqual({
-      score30days: [{name: 'Bobby', score: 300}],
+      receivedData: [{name: 'Bobby', score: 300}],
     });
   });
 
@@ -40,10 +40,10 @@ describe('reducer', () => {
     expect(
       reducer({}, {
         type: types.FETCH_30_FAILURE,
-        ex: 'Error',
+        ex: {message: 'Error'},
       })
     ).toEqual({
-      error: 'Error',
+      errorMessage: 'Error',
     });
   });
 
@@ -64,7 +64,7 @@ describe('reducer', () => {
         data: [{name: 'Bobby', score: 300}],
       })
     ).toEqual({
-      scoreAlldays: [{name: 'Bobby', score: 300}],
+      receivedData: [{name: 'Bobby', score: 300}],
     });
   });
 
@@ -72,10 +72,10 @@ describe('reducer', () => {
     expect(
       reducer({}, {
         type: types.FETCH_ALL_FAILURE,
-        ex: 'Error',
+        ex: {message: 'Error'},
       })
     ).toEqual({
-      error: 'Error',
+      errorMessage: 'Error',
     });
   });
 

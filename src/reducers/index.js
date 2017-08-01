@@ -1,11 +1,10 @@
 import * as types from '../constants/ActionTypes';
 
 const initial_state = {
-  isRequesting: false,
+  isRequesting: true,
+  errorMessage: '',
   show30days: true,
-  score30days: [],
-  scoreAlldays: [],
-  error: '',
+  receivedData: [],
 };
 
 const leaderboardApp = (
@@ -21,13 +20,14 @@ const leaderboardApp = (
     case types.FETCH_30_SUCCESS:
       return {
         ...state,
+        isRequesting: false,
         show30days: true,
-        score30days: action.data,
+        receivedData: action.data,
       };
     case types.FETCH_30_FAILURE:
       return {
         ...state,
-        error: action.ex,
+        errorMessage: action.ex.message,
       };
     case types.FETCH_ALL_REQUEST:
       return {
@@ -37,13 +37,14 @@ const leaderboardApp = (
     case types.FETCH_ALL_SUCCESS:
       return {
         ...state,
+        isRequesting: false,
         show30days: false,
-        scoreAlldays: action.data,
+        receivedData: action.data,
       };
     case types.FETCH_ALL_FAILURE:
       return {
         ...state,
-        error: action.ex,
+        errorMessage: action.ex,
       };
     default:
       return state;

@@ -14,31 +14,16 @@ export class App extends Component {
 
   render() {
     const {
-      show30days,
-      score30days,
-      scoreAlldays,
+      isRequesting,
+      errorMessage,
       fetch30,
-      fetchAll
     } = this.props;
 
-    const score = show30days ? score30days : scoreAlldays;
-    const tableContent = score.map((user, index) => {
-      return (
-        <tr key={user.username}>
-          <td>{index + 1}</td>
-          <td className="username-column">
-            <a
-              target="blank"
-              href={`https://www.freecodecamp.com/${user.username}`}>
-              <img src={user.img} />
-              <span>{user.username}</span>
-            </a>
-          </td>
-          <td>{user.recent}</td>
-          <td>{user.alltime}</td>
-        </tr>
-      );
-    });
+    const mainComponent = !isRequesting
+      ? <Table />
+      : errorMessage
+        ? <div className="network-message">Error: {errorMessage}</div>
+        : <div className="network-message">Network request in progress...</div>;
 
     return (
       <div className="app">
@@ -47,11 +32,7 @@ export class App extends Component {
           <h1>freeCodeCamp Leaderboard</h1>
         </header>
 
-        <Table
-          tableContent={tableContent}
-          show30days={show30days}
-          handle30days={fetch30}
-          handleAllTime={fetchAll} />
+        {mainComponent}
 
         <footer>
           <p>2017, created by <a target="blank" href="https://github.com/GuRuGuMaWaRu">Peter Krevenets</a></p>
@@ -64,18 +45,15 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  show30days: PropTypes.bool,
-  score30days: PropTypes.array,
-  scoreAlldays: PropTypes.array,
+  isRequesting: PropTypes.bool,
+  errorMessage: PropTypes.string,
   fetch30: PropTypes.func,
-  fetchAll: PropTypes.func,
 };
 
 
 const mapStateToProps = (state) => ({
-  show30days: state.show30days,
-  score30days: state.score30days,
-  scoreAlldays: state.scoreAlldays,
+  isRequesting: state.isRequesting,
+  errorMessage: state.errorMessage,
 });
 
 export default connect(mapStateToProps, actions)(App);

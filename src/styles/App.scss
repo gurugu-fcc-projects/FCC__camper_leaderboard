@@ -16,8 +16,13 @@
 ------------------------- */
 
 /* 1.1 Color variables */
-$color-fcc:   #006400;
-$color-white: #fff;
+$color-fcc        : #006400;
+$color-white      : #ddd;
+$color-shadow     : darken($color-fcc, 12%);
+$color-bg-header  : darken($color-fcc, 7%);
+$color-hover-light: lighten($color-fcc, 15%);
+$color-footer-link: lighten(yellow, 15%);
+$color-table-row  : #eee;
 
 /* 1.2 Font variables */
 $font-header: 'Titillium Web', sans-serif;
@@ -50,12 +55,17 @@ a {
   color: inherit;
 }
 
+.network-message{
+  color: $color-white;
+}
+
 @media
 only screen and (max-width: 760px) {
   app {
     justify-content: flex-start;
   }
 }
+
 /* -------------------------
         3. HEADER
 ------------------------- */
@@ -88,7 +98,7 @@ only screen and (max-width: 760px),
   width: 1000px;
   height: 600px;
   background-color: $color-white;
-  box-shadow: 10px 10px darken($color-fcc, 12%);
+  box-shadow: 10px 10px $color-shadow;
 }
 
 table {
@@ -104,7 +114,7 @@ table {
     cursor: pointer;
     transition: color .2s ease-in;
     &:hover {
-      color: lighten($color-fcc, 15%);
+      color: $color-hover-light;
     }
   }
 
@@ -116,7 +126,7 @@ table {
         padding: 5px;
         color: $color-white;
         font-weight: bold;
-        background-color: darken($color-fcc, 7%);
+        background-color: $color-bg-header;
       }
     }
   }
@@ -126,7 +136,7 @@ table {
     height: 100%;
     overflow: auto;
     tr:nth-of-type(odd) {
-      background-color: #eee;
+      background-color: $color-table-row;
     }
     td:not(.username-column) {
       text-align: center;
@@ -136,7 +146,7 @@ table {
       align-items: center;
       transition: color .1s ease-in;
       &:hover {
-        color: lighten($color-fcc, 15%);
+        color: $color-hover-light;
       }
     }
     img {
@@ -192,7 +202,7 @@ tbody::-webkit-scrollbar-thumb {
 footer {
   color: $color-white;
   a {
-    color: lighten(yellow, 15%);
+    color: $color-footer-link;
   }
 }
 
