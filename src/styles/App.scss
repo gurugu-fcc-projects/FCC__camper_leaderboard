@@ -100,7 +100,13 @@ table {
   td:nth-child(3), th:nth-child(3) { width: 225px; }
   td:nth-child(4), th:nth-child(4) { width: 225px; }
 
-  th:nth-child(3), th:nth-child(4) { cursor: pointer; }
+  th:nth-child(3), th:nth-child(4) {
+    cursor: pointer;
+    transition: color .2s ease-in;
+    &:hover {
+      color: lighten($color-fcc, 15%);
+    }
+  }
 
   thead {
     tr {
@@ -128,6 +134,10 @@ table {
     td a {
       display: flex;
       align-items: center;
+      transition: color .1s ease-in;
+      &:hover {
+        color: lighten($color-fcc, 15%);
+      }
     }
     img {
       height: 30px;
