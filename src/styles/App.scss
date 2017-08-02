@@ -149,12 +149,15 @@ table {
     width: 100%;
     height: 100%;
     overflow: auto;
+
     tr:nth-of-type(odd) {
       background-color: $color-table-row;
     }
+
     td:not(.username-column) {
       text-align: center;
     }
+
     td a {
       display: flex;
       align-items: center;
@@ -163,9 +166,28 @@ table {
         color: $color-hover-light;
       }
     }
+
     img {
       height: 30px;
       padding: 5px 10px 5px 5px;
+    }
+
+    .camper-data-enter {
+      opacity: 0.01;
+    }
+
+    .camper-data-enter.camper-data-enter-active {
+      opacity: 1;
+      transition: opacity 500ms ease-in;
+    }
+
+    .camper-data-leave {
+      opacity: 1;
+    }
+
+    .camper-data-leave.camper-data-leave-active {
+      opacity: 0.01;
+      transition: opacity 300ms ease-in;
     }
   }
 }

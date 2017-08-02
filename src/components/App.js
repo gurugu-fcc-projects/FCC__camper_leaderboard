@@ -26,6 +26,10 @@ export class App extends Component {
         ? <Message message={`Error: ${errorMessage}`} />
         : <Message message={'Network request in progress...'}/>;
 
+    const camperData = [1,2,3,4,5,6,7].map((data, index) => (
+      <div key={index}>{data}</div>
+    ));
+
     return (
       <div className="app">
 

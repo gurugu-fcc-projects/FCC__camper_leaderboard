@@ -12,11 +12,9 @@ const Table = ({
   fetchAll,
 }) => {
 
-  const camperData = receivedData.map((data, index) => {
-    return (
-      <TableRow key={index + 1} data={data} index={index} />
-    );
-  });
+  const camperData = receivedData.map((data, index) => (
+    <TableRow key={index + 1} data={data} index={index} />
+  ));
 
   return (
     <table>
@@ -34,8 +32,8 @@ const Table = ({
       </thead>
       <tbody>
 
-        {camperData}
-
+          {camperData}
+          
       </tbody>
     </table>
   );
