@@ -8,7 +8,7 @@
 ## Thoughts
 This was the first react-redux project where I used TDD heavily for actions and reducers. Actually that was the reason why I ditched create-react-app - I just couldn't make test libs install properly.
 
-As for the project itself, the main idea was to add a sticky header to the table, and to use the same fancy scrollbar I used in the previous project.
+As for the project itself, the main idea was to add a sticky header and to use the same fancy scrollbar I used in the previous project.
 
 ## Links
 - [ ] freecodecamp challenge link: [https://www.freecodecamp.com/challenges/build-a-camper-leaderboard](https://www.freecodecamp.com/challenges/build-a-camper-leaderboard)
