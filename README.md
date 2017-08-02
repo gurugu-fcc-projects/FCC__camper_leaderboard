@@ -9,4 +9,4 @@ codepen link [https://codepen.io/GuRuGu/pen/jLMEJP](https://codepen.io/GuRuGu/pe
 gh-pages link [https://gurugumawaru.github.io/FCC_camper_leaderboard/](https://gurugumawaru.github.io/FCC_camper_leaderboard/)
 
 ## Video Walkthrough
-![]()
+![](https://github.com/gurugumawaru/FCC_camper_leaderboard/blob/master/FCC_Camper_Leaderboard.gif)
