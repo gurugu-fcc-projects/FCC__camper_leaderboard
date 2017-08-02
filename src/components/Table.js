@@ -19,7 +19,7 @@ const Table = ({
   });
 
   return (
-    <table className="table">
+    <table>
       <thead>
         <tr>
           <th>#</th>

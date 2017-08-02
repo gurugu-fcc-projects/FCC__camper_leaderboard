@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Table from './Table';
+import Message from './Message';
 import * as actions from '../actions';
 import '../styles/App.scss';
 
@@ -22,8 +23,8 @@ export class App extends Component {
     const mainComponent = !isRequesting
       ? <Table />
       : errorMessage
-        ? <div className="network-message">Error: {errorMessage}</div>
-        : <div className="network-message">Network request in progress...</div>;
+        ? <Message message={`Error: ${errorMessage}`} />
+        : <Message message={'Network request in progress...'}/>;
 
     return (
       <div className="app">
