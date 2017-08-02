@@ -7,7 +7,6 @@ https://www.freecodecamp.com/challenges/build-a-camper-leaderboard
 - [ ] I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.
 
 codepen link [https://codepen.io/GuRuGu/pen/jLMEJP](https://codepen.io/GuRuGu/pen/jLMEJP)
-
 gh-pages link [https://gurugumawaru.github.io/FCC_camper_leaderboard/](https://gurugumawaru.github.io/FCC_camper_leaderboard/)
 
 ## Video Walkthrough
