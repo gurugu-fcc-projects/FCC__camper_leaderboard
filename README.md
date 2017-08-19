@@ -11,7 +11,7 @@ This was the first react-redux project where I used TDD heavily for actions and 
 As for the project itself, the main idea was to add a sticky header and to use the same fancy scrollbar I used in the previous project.
 
 ## Links
-- [ ] freecodecamp challenge: [https://www.freecodecamp.com/challenges/build-a-camper-leaderboard!!!](https://www.freecodecamp.com/challenges/build-a-camper-leaderboard)
+- [ ] freecodecamp challenge: [https://www.freecodecamp.com/challenges/build-a-camper-leaderboard](https://www.freecodecamp.com/challenges/build-a-camper-leaderboard)
 - [ ] codepen: [https://codepen.io/GuRuGu/pen/jLMEJP](https://codepen.io/GuRuGu/pen/jLMEJP)
 - [ ] gh-pages: [https://gurugumawaru.github.io/FCC_camper_leaderboard/](https://gurugumawaru.github.io/FCC_camper_leaderboard/)
 
