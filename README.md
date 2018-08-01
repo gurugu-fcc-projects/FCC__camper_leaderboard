@@ -1,6 +1,6 @@
 ## FreeCodeCamp React Project - Camper Leaderboard
 
-## User Story
+## User Stories
 - [ ] I can see a table of the freeCodeCamp campers who've earned the most brownie points in the past 30 days.
 - [ ] I can see how many brownie points they've earned in the past 30 days, and how many they've earned total.
 - [ ] I can toggle between sorting the list by how many brownie points they've earned in the past 30 days and by how many brownie points they've earned total.
@@ -13,7 +13,7 @@ As for the project itself, the main idea was to add a sticky header and to use t
 ## Links
 - [ ] this project at codepen: [https://codepen.io/GuRuGu/pen/jLMEJP](https://codepen.io/GuRuGu/pen/jLMEJP)
 - [ ] this project at gh-pages: [https://gurugumawaru.github.io/FCC_camper_leaderboard/](https://gurugumawaru.github.io/FCC_camper_leaderboard/)
-- [ ] freecodecamp challenge: [https://www.freecodecamp.com/challenges/build-a-camper-leaderboard](https://www.freecodecamp.com/challenges/build-a-camper-leaderboard)
+- [ ] freecodecamp challenge: [https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-camper-leaderboard](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-camper-leaderboard)
 
 ## Video Walkthrough
 ![](https://github.com/gurugumawaru/FCC_camper_leaderboard/blob/master/FCC_Camper_Leaderboard.gif)
