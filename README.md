@@ -10,6 +10,9 @@ This was the first react-redux project where I used TDD heavily for actions and 
 
 As for the project itself, the main idea was to add a sticky header and to use the same fancy scrollbar I used in the previous project.
 
+## Additional Information
+All data is received from a third-party Heroku app, what it means is that the data may not be displayed if something happens with the mentioned app. Other than that Camper Leaderboard is completely functional.
+
 ## Links
 - [ ] this project at codepen: [https://codepen.io/GuRuGu/pen/jLMEJP](https://codepen.io/GuRuGu/pen/jLMEJP)
 - [ ] this project at gh-pages: [https://gurugumawaru.github.io/FCC_camper_leaderboard/](https://gurugumawaru.github.io/FCC_camper_leaderboard/)
