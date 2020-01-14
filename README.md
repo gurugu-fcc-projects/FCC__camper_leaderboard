@@ -15,7 +15,7 @@ All data is received from a third-party Heroku app, what it means is that the da
 
 ## Links
 - [ ] this project at codepen: [https://codepen.io/GuRuGu/pen/jLMEJP](https://codepen.io/GuRuGu/pen/jLMEJP)
-- [ ] this project at gh-pages: [https://gurugumawaru.github.io/FCC_camper_leaderboard/](https://gurugumawaru.github.io/FCC_camper_leaderboard/)
+- [ ] this project at gh-pages: [https://gurugu-fcc-projects.github.io/FCC__camper_leaderboard/](https://gurugu-fcc-projects.github.io/FCC__camper_leaderboard/)
 - [ ] freecodecamp challenge: [https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-camper-leaderboard](https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/build-a-camper-leaderboard)
 
 ## Video Walkthrough
